@@ -1,0 +1,83 @@
+! Title: Dowon Personal DNS Filter
+! Description: Personal DNS rules for AdGuard DNS filtering
+! Maintainer: Harrison / Dowon
+! Last modified: 2026-04-29
+!
+! Usage:
+! Add this raw URL to AdGuard > DNS Protection > DNS filters.
+
+! ==============================
+! Apple / iCloud whitelist
+! ==============================
+! These rules allow Apple/iCloud domains and their subdomains.
+
+@@||apple.com^
+@@||icloud.com^
+@@||icloud-content.com^
+@@||cdn-apple.com^
+@@||aaplimg.com^
+@@||mzstatic.com^
+
+! ==============================
+! Douban
+! ==============================
+
+||api.douban.com^
+
+! ==============================
+! Zepp / Mi Fitness / Amazfit telemetry
+! ==============================
+
+||api-mifit-cn3.zepp.com^$important
+||api-analytics-cn3.zepp.com^$important
+||api-analytics.zepp.com^$important
+||api-mifit-us3.zepp.com^$important
+||img-cdn.zepp.com^$important
+
+! ==============================
+! Naver / Naver Map ads
+! ==============================
+
+||veta.naver.com^
+||gfp.veta.naver.com^
+||nam.veta.naver.com^
+||nv.veta.naver.com^
+||nv1.veta.naver.com^
+||nv2.veta.naver.com^
+||nv3.veta.naver.com^
+||tveta.naver.net^
+||tivan.naver.com^
+
+||recoshopping.naver.com^
+||shopsquare.naver.com^
+||castbox.shopping.naver.com^
+||shoppingbox.naver.com^
+
+||adcr.naver.com^
+||adcreative.naver.com^
+||ad.naver.com^
+||adc.naver.com^
+||ad.nmv.naver.com^
+||ad.news.naver.com^
+
+! ==============================
+! KakaoTalk top/banner ads
+! ==============================
+
+||display.ad.daum.net^
+||analytics.ad.daum.net^
+||wat.ad.daum.net^
+||alea.adam.ad.daum.net^
+||kyson.ad.daum.net^
+||ad.daum.net^
+
+||adfit.kakao.com^
+||*.adfit.kakao.com^
+
+! ==============================
+! Cautious / disabled rules
+! Enable only if tested.
+! ==============================
+
+! ||ad-creative.pstatic.net^
+! ||searchad-phinf.pstatic.net^
