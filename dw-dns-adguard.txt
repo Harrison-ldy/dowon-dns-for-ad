@@ -7,18 +7,6 @@
 ! Add this raw URL to AdGuard > DNS Protection > DNS filters.
 
 ! ==============================
-! Apple / iCloud whitelist
-! ==============================
-! These rules allow Apple/iCloud domains and their subdomains.
-
-@@||apple.com^
-@@||icloud.com^
-@@||icloud-content.com^
-@@||cdn-apple.com^
-@@||aaplimg.com^
-@@||mzstatic.com^
-
-! ==============================
 ! Douban
 ! ==============================
 
