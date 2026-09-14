@@ -1,0 +1,75 @@
+! Title: for kk
+! Description: Personal AdGuard DNS rules for Kakao/Daum ads and tracking, plus KakaoTalk short-video and shopping blocking.
+! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
+! Version: 2026.09.15.1
+! Last modified: 2026-09-15
+! Expires: 1 day
+! Maintainer: Harrison / Dowon
+!
+! DNS subscription. Rules apply to matching domains across apps, not only KakaoTalk.
+! Short-video and shopping content is intentionally blocked, not just ads in those tabs.
+! Public-source rules; effectiveness and false positives have not been tested on this device.
+! This file is a maintained snapshot; it does not automatically merge upstream changes.
+!
+! === Requested union of upstream old and new lists: 37 unique rules ===
+! Source: seonghobae/AdGuardDNS_KakaoAdBlock, author seonghobae
+! https://github.com/seonghobae/AdGuardDNS_KakaoAdBlock/blob/main/kakao-adblock-filter.txt
+! Source version: 20250928; blob: 5e9fd6b99918084498d6ed183c1a473f1cb823c5
+! https://github.com/seonghobae/AdGuardDNS_KakaoAdBlock/blob/develop/kakao-adblock-filter.txt
+! Source version: 20260628; blob: 17983a8034c9c4e949383e5891be9913de532079
+! All 4 newer rules are already in the older 37; exact duplicates removed.
+! Original candidate rules are preserved as requested, including broader parent rules.
+! DNS lookup failures alone were not used to delete rules.
+||ad.kakao.com^
+||ad.kakaomap.com^
+||ad.kakaopay.com^
+||ad.kakaotalk.com^
+||ads.kakao.com^
+||ads.kakaocdn.net^
+||ads.kakaomap.com^
+||ads.kakaotalk.com^
+||analytics.kakao.com^
+||beacon.kakao.com^
+||bizboard.kakao.com^
+||collector.kakao.com^
+||dmp.kakao.com^
+||metrics.kakao.com^
+||pixel.kakao.com^
+||pixel.kakaocdn.net^
+||pixel.kakaotalk.com^
+||track.kakao.com^
+||track.kakaocdn.net^
+||track.kakaomap.com^
+||track.kakaopay.com^
+||track.kakaotalk.com^
+||ad.daum.net^
+||ads.daum.net^
+||analytics.daum.net^
+||banner.ad.daum.net^
+||beacon.daum.net^
+||bizboard.daum.net^
+||collector.daum.net^
+||display.ad.daum.net^
+||dmp.daum.net^
+||info.ad.daum.net^
+||metrics.daum.net^
+||mobile.ad.daum.net^
+||pixel.daum.net^
+||track.daum.net^
+||video.ad.daum.net^
+!
+! === Additional KakaoTalk ad endpoint supported by maintainer discussion ===
+! https://github.com/AdguardTeam/AdguardFilters/issues/235400#issuecomment-4931797667
+! https://github.com/AdguardTeam/AdguardFilters/issues/235400#issuecomment-4931929969
+! iPhone report: ads blocked with DNS protection; a default banner can remain.
+||serv.ds.kakao.com^
+!
+! === Intentionally block KakaoTalk short videos and shopping ===
+! Source: https://github.com/List-KR/List-KR/pull/1019
+! These block feature endpoints across this DNS filter's scope.
+! Short videos:
+||play.kakao.com^
+! Shopping:
+||shopper.kakao.com^
+!
+! Total: 40 unique blocking rules. No allowlist rules.
