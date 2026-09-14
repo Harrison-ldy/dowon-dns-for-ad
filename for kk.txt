@@ -1,13 +1,12 @@
 ! Title: for kk
-! Description: Personal AdGuard DNS rules for Kakao/Daum ads and tracking, plus KakaoTalk short-video and shopping blocking.
+! Description: Personal AdGuard DNS rules for Kakao/Daum ads and tracking.
 ! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
-! Version: 2026.09.15.1
+! Version: 2026.09.15.2
 ! Last modified: 2026-09-15
 ! Expires: 1 day
 ! Maintainer: Harrison / Dowon
 !
 ! DNS subscription. Rules apply to matching domains across apps, not only KakaoTalk.
-! Short-video and shopping content is intentionally blocked, not just ads in those tabs.
 ! Public-source rules; effectiveness and false positives have not been tested on this device.
 ! This file is a maintained snapshot; it does not automatically merge upstream changes.
 !
@@ -64,12 +63,4 @@
 ! iPhone report: ads blocked with DNS protection; a default banner can remain.
 ||serv.ds.kakao.com^
 !
-! === Intentionally block KakaoTalk short videos and shopping ===
-! Source: https://github.com/List-KR/List-KR/pull/1019
-! These block feature endpoints across this DNS filter's scope.
-! Short videos:
-||play.kakao.com^
-! Shopping:
-||shopper.kakao.com^
-!
-! Total: 40 unique blocking rules. No allowlist rules.
+! Total: 38 unique blocking rules. No allowlist rules.
