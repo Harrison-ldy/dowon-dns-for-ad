@@ -1,7 +1,7 @@
 ! Title: for kk
 ! Description: Personal AdGuard DNS rules for Kakao/Daum ads and tracking.
 ! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
-! Version: 2026.09.15.2
+! Version: 2026.09.15.3
 ! Last modified: 2026-09-15
 ! Expires: 1 day
 ! Maintainer: Harrison / Dowon
@@ -63,4 +63,19 @@
 ! iPhone report: ads blocked with DNS protection; a default banner can remain.
 ||serv.ds.kakao.com^
 !
-! Total: 38 unique blocking rules. No allowlist rules.
+! === User-approved trial additions ===
+! Ad audience / cookie matching; does not guarantee fewer visible banners.
+! https://kakaobusiness.gitbook.io/main/partner/kakaoadx_rtb/appendix
+! https://github.com/hagezi/dns-blocklists/blob/main/adblock/pro.txt
+||act.ds.kakao.com^
+!
+! Candidate listed in HaGeZi PRO++; app-specific effect remains unverified.
+! https://github.com/hagezi/dns-blocklists/blob/main/adblock/pro.plus.txt
+||ads-api.daum.net^
+!
+! Video advertising candidate; may interfere with KakaoTV playback.
+! https://github.com/hagezi/dns-blocklists/issues/5123
+! https://github.com/AdguardTeam/AdguardFilters/issues/132431
+||videoads.kakao.com^
+!
+! Total: 41 unique blocking rules. No allowlist rules.
