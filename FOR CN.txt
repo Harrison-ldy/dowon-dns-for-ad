@@ -1,0 +1,59 @@
+! Title: FOR CN
+! Description: Personal strict DNS supplement for ads, telemetry and device-identification candidates in Chinese apps.
+! Version: 2026.10.10.1
+! Last modified: 2026-10-10
+! Expires: 1 day
+! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
+! User-approved strict trial rules. Compatibility and visible-ad effects need device testing.
+! Applies to all apps contacting these hosts, regardless of app origin.
+! Maintained manually; does not automatically merge upstream blocklists.
+! Sources: https://github.com/hagezi/dns-blocklists
+! Sources: https://github.com/badmojr/1Hosts
+! Sources: https://github.com/vokins/ad
+! Sources: https://github.com/TonyRL/blocklist
+! Disable this subscription to revert the batch; remove a specific rule to narrow rollback.
+! No important modifier; no broad shared-CDN parent rules.
+
+! Xiaohongshu: advertising asset candidate; strongest evidence for first isolated trial.
+! Sources: HaGeZi NORMAL, PRO mini, ULTIMATE; 1Hosts Lite; vokins/ad.
+||ads-i8.xhscdn.com^
+
+! WeChat: telemetry candidate based on naming and HaGeZi inclusion; not exclusive-use verified.
+||wetelemetry.weixin.qq.com^
+
+! Taobao: Tanx advertising/logging candidate; HaGeZi ULTIMATE and vokins/ad.
+||bdlog.tanx.com^
+
+! Taobao: A/B experiment candidate; HaGeZi ULTIMATE and 1Hosts Lite.
+! Configuration/experiment behavior can change.
+||yixiu-abtest.alicdn.com^
+
+! JD: performance telemetry candidate inferred from name and HaGeZi ULTIMATE inclusion.
+! Exclusive purpose not independently verified; test separately.
+||perf.m.jd.com^
+
+! Tencent device/risk-identification candidate; may affect QQ-family apps.
+! Known report: QQ/TIM video download failure; anti-AD allowlisted it.
+! https://github.com/privacy-protection-tools/anti-AD/issues/1092
+||tdid.m.qq.com^
+
+! Alipay / Taobao / Amap / MYbank: Chengdun security/risk candidate, not exclusive-use verified.
+! Known report: user observed an unspecified error after blocking.
+! https://github.com/AdguardTeam/AdguardFilters/issues/235665
+||mum.alibabachengdun.net^
+
+! Taobao: Chengdun-related candidate; HaGeZi ULTIMATE and 1Hosts Lite.
+! Security/device-identification role is inferred; exact function and impact unverified.
+||umdc.alibabachengdun.com^
+
+! UnionPay: analytics; known report of subsidy page failure.
+! https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/116
+||analytics.95516.com^
+
+! UnionPay: advertising/SDK candidate supported by HaGeZi ULTIMATE, 1Hosts and TonyRL.
+! Rewards/promotional or other SDK-backed screens may be affected; device test pending.
+||tysdk.95516.com^
+
+! UnionPay: Baidu Sofire SDK/security-related candidate; several lists block it.
+! Baidu also documents push callbacks on this host; not an exclusively tracking host.
+||sofire.baidu.com^
