@@ -1,6 +1,6 @@
 ! Title: FOR CN
 ! Description: Personal strict DNS supplement for ads, telemetry and device-identification candidates in Chinese apps.
-! Version: 2026.10.10.1
+! Version: 2026.10.10.2
 ! Last modified: 2026-10-10
 ! Expires: 1 day
 ! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
@@ -57,3 +57,38 @@
 ! UnionPay: Baidu Sofire SDK/security-related candidate; several lists block it.
 ! Baidu also documents push callbacks on this host; not an exclusively tracking host.
 ||sofire.baidu.com^
+
+! === Additional 8 user-approved compatibility-sensitive trials: 2026-10-10 ===
+! Inclusion in another list does not establish an exclusively advertising/tracking purpose.
+
+! Xiaomi push API; HaGeZi PRO mini and ULTIMATE.
+! May affect related push-service calls; not an ads-only host.
+||api.xmpush.xiaomi.com^
+
+! Qidian resource CDN; HaGeZi ULTIMATE.
+! May block normal image/audio/comic resources; device impact unverified.
+||bossaudioandcomic-1252317822.image.myqcloud.com^
+
+! Shared CDN accessed by Qidian; HaGeZi ULTIMATE.
+! May affect normal assets in Qidian and other apps.
+||lf-cdn-tos.bytescm.com^
+
+! Xiaomi file CDN; HaGeZi NORMAL, PRO mini, ULTIMATE and 1Hosts Lite.
+! May affect normal Mi Home resources and file downloads.
+||cdn.fds.api.xiaomi.com^
+
+! Xiaomi file service; 1Hosts Lite.
+! Shared file host; blocking can affect normal downloads.
+||cnbj1.fds.api.xiaomi.com^
+
+! QQ Connect-related endpoint; HaGeZi ULTIMATE.
+! May affect QQ authorization/login in apps using this service.
+||cgi.connect.qq.com^
+
+! WeChat connection endpoint; HaGeZi NORMAL, PRO mini, ULTIMATE and 1Hosts Lite.
+! May affect normal WeChat communication; not confirmed telemetry-only.
+||szlong.weixin.qq.com^
+
+! Taobao business API candidate; HaGeZi ULTIMATE.
+! May affect normal shopping/transaction pages; not confirmed ads-only.
+||trade-acs.m.taobao.com^
