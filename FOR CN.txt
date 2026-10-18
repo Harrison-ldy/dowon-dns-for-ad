@@ -1,7 +1,7 @@
 ! Title: FOR CN
 ! Description: Personal strict DNS supplement for ads, telemetry and device-identification candidates in Chinese apps.
-! Version: 2026.10.10.2
-! Last modified: 2026-10-10
+! Version: 2026.10.19.1
+! Last modified: 2026-10-19
 ! Expires: 1 day
 ! Homepage: https://github.com/Harrison-ldy/dowon-dns-for-ad
 ! User-approved strict trial rules. Compatibility and visible-ad effects need device testing.
@@ -92,3 +92,13 @@
 ! Taobao business API candidate; HaGeZi ULTIMATE.
 ! May affect normal shopping/transaction pages; not confirmed ads-only.
 ||trade-acs.m.taobao.com^
+
+! === Additional user-approved trials: 2026-10-19 ===
+
+! Xiaohongshu: advertising asset candidate; HaGeZi PRO and vokins/ad.
+! Device effects unverified; check normal image and video loading.
+||ads-i10.xhscdn.com^
+
+! JobKorea: advertising candidate; HaGeZi PRO.
+! Device effects unverified; check job listings, links and applications.
+||ads.jobkorea.co.kr^
